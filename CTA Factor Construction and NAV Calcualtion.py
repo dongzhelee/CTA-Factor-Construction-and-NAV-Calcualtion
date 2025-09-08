@@ -4,7 +4,6 @@ import numpy as np
 
 
 # %%SubFunction of Warehouse Calculation(仓单计算子函数)
-
 def calculate_rolling_mean(df, start, end):
     window_size = start
     if end == 0:
@@ -1166,5 +1165,6 @@ def factor_calculate_Trend(MarketChange, FactorData, UniverseData
     NAV['NonCompounded'] = DailyReturn.cumsum() + 1
     # Calculate the cumulative return of compound interest
     NAV['Compounded'] = (1 + DailyReturn).cumprod()
+
 
     return NAV, DailyContribution, DailyReturn
